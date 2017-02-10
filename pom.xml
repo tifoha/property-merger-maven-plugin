@@ -31,21 +31,6 @@
       <version>3.3.0</version>
       <scope>test</scope>
     </dependency>
-    <!--&lt;!&ndash; https://mvnrepository.com/artifact/commons-validator/commons-validator &ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>commons-validator</groupId>-->
-      <!--<artifactId>commons-validator</artifactId>-->
-      <!--<version>1.4.0</version>-->
-    <!--</dependency>-->
-    <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
-      <!--&lt;!&ndash;<groupId>com.github.maven-integration-test-helper</groupId>&ndash;&gt;-->
-      <!--&lt;!&ndash;<artifactId>maven-integration-test-helper</artifactId>&ndash;&gt;-->
-      <!--&lt;!&ndash;<version>1.0</version>&ndash;&gt;-->
-    <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>org.apache.maven.shared</groupId>-->
-      <!--<artifactId>maven-verifier</artifactId>-->
-    <!--</dependency>-->
   </dependencies>
   <build>
     <plugins>
@@ -53,22 +38,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
         <version>3.5</version>
-        <!--<configuration>-->
-          <!--<goalPrefix>property-merger</goalPrefix>-->
-        <!--</configuration>-->
-        <!--<executions>-->
-          <!--<execution>-->
-            <!--<id>default-descriptor</id>-->
-            <!--<phase>process-classes</phase>-->
-          <!--</execution>-->
-          <!--&lt;!&ndash; if you want to generate help goal &ndash;&gt;-->
-          <!--<execution>-->
-            <!--<id>help-goal</id>-->
-            <!--<goals>-->
-              <!--<goal>helpmojo</goal>-->
-            <!--</goals>-->
-          <!--</execution>-->
-        <!--</executions>-->
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -84,4 +53,14 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>myMavenRepo.write</id>
+      <url>${myMavenRepo.write.url}</url>
+    </repository>
+    <snapshotRepository>
+      <id>myMavenRepo.write</id>
+      <url>${myMavenRepo.write.url}</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
